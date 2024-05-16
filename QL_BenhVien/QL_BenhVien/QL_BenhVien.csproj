@@ -47,11 +47,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConnect.cs" />
+    <Compile Include="FrmAdminDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdminDangNhap.Designer.cs">
+      <DependentUpon>FrmAdminDangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBacSiDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmBacSiDangNhap.Designer.cs">
       <DependentUpon>FrmBacSiDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChiTietAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChiTietAdmin.Designer.cs">
+      <DependentUpon>FrmChiTietAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmChiTietBacSi.cs">
       <SubType>Form</SubType>
@@ -61,8 +73,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAdminDangNhap.resx">
+      <DependentUpon>FrmAdminDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBacSiDangNhap.resx">
       <DependentUpon>FrmBacSiDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChiTietAdmin.resx">
+      <DependentUpon>FrmChiTietAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmChiTietBacSi.resx">
       <DependentUpon>FrmChiTietBacSi.cs</DependentUpon>

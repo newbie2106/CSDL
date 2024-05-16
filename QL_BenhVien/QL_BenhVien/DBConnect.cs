@@ -12,7 +12,7 @@ namespace QL_BenhVien
        public SqlConnection connection()
         {
             //string Adres = System.IO.File.ReadAllText(@"E:\QL_BenhVien\connection.txt");
-            SqlConnection _conn = new SqlConnection("Data Source=AHA\\SQLEXPRESS;Initial Catalog=HOSPITALDB;Integrated Security=True");
+            SqlConnection _conn = new SqlConnection("Data Source=LAPTOP-9TNEKCVK\\TAN_DAT;Initial Catalog=HOSPITALDB;Integrated Security=True");
             _conn.Open();
             return _conn;
         }

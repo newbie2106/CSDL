@@ -9,3 +9,16 @@ E:\QL_BenhVien\QL_BenhVien\bin\Debug\QL_BenhVien.exe
 E:\QL_BenhVien\QL_BenhVien\bin\Debug\QL_BenhVien.pdb
 E:\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.exe
 E:\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.pdb
+C:\Users\TAN DAT\Desktop\CSDL\QL_BenhVien\QL_BenhVien\bin\Debug\QL_BenhVien.exe.config
+C:\Users\TAN DAT\Desktop\CSDL\QL_BenhVien\QL_BenhVien\bin\Debug\QL_BenhVien.exe
+C:\Users\TAN DAT\Desktop\CSDL\QL_BenhVien\QL_BenhVien\bin\Debug\QL_BenhVien.pdb
+C:\Users\TAN DAT\Desktop\CSDL\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.csproj.AssemblyReference.cache
+C:\Users\TAN DAT\Desktop\CSDL\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.FrmAdminDangNhap.resources
+C:\Users\TAN DAT\Desktop\CSDL\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.FrmBacSiDangNhap.resources
+C:\Users\TAN DAT\Desktop\CSDL\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.FrmChiTietBacSi.resources
+C:\Users\TAN DAT\Desktop\CSDL\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.Properties.Resources.resources
+C:\Users\TAN DAT\Desktop\CSDL\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.csproj.GenerateResource.cache
+C:\Users\TAN DAT\Desktop\CSDL\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.csproj.CoreCompileInputs.cache
+C:\Users\TAN DAT\Desktop\CSDL\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.exe
+C:\Users\TAN DAT\Desktop\CSDL\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.pdb
+C:\Users\TAN DAT\Desktop\CSDL\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.FrmChiTietAdmin.resources
