@@ -1,0 +1,11 @@
+E:\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.csproj.AssemblyReference.cache
+E:\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.FrmBacSiDangNhap.resources
+E:\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.FrmChiTietBacSi.resources
+E:\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.Properties.Resources.resources
+E:\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.csproj.GenerateResource.cache
+E:\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.csproj.CoreCompileInputs.cache
+E:\QL_BenhVien\QL_BenhVien\bin\Debug\QL_BenhVien.exe.config
+E:\QL_BenhVien\QL_BenhVien\bin\Debug\QL_BenhVien.exe
+E:\QL_BenhVien\QL_BenhVien\bin\Debug\QL_BenhVien.pdb
+E:\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.exe
+E:\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.pdb
