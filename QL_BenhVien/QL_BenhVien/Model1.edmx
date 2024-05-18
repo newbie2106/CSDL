@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="HOSPITALDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ho" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="ten" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="taikhoan" Type="char" MaxLength="11" />
+          <Property Name="matkhau" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="BacSi">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ho" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="ten" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="id_nganh" Type="int" Nullable="false" />
+          <Property Name="taikhoan" Type="char" MaxLength="11" Nullable="false" />
+          <Property Name="matkhau" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BenhNhan">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ten" Type="varchar" MaxLength="20" />
+          <Property Name="ho" Type="varchar" MaxLength="30" />
+          <Property Name="taikhoan" Type="char" MaxLength="11" />
+          <Property Name="matkhau" Type="varchar" MaxLength="10" />
+          <Property Name="sdt" Type="varchar" MaxLength="15" />
+          <Property Name="gioitinh" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="CuocHen">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_bacsi" Type="int" Nullable="false" />
+          <Property Name="id_benhnhan" Type="int" Nullable="false" />
+          <Property Name="id_nganh" Type="int" Nullable="false" />
+          <Property Name="ngay" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="thoigian" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="mota" Type="nvarchar(max)" />
+          <Property Name="isDuyet" Type="bit" />
+        </EntityType>
+        <EntityType Name="Nganh">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ten_nganh" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="THONGBAO">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Noidung" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <Association Name="FK__BacSi__id_nganh__4222D4EF">
+          <End Role="Nganh" Type="Self.Nganh" Multiplicity="1" />
+          <End Role="BacSi" Type="Self.BacSi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nganh">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="BacSi">
+              <PropertyRef Name="id_nganh" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CuocHen_BacSi">
+          <End Role="BacSi" Type="Self.BacSi" Multiplicity="1" />
+          <End Role="CuocHen" Type="Self.CuocHen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BacSi">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CuocHen">
+              <PropertyRef Name="id_bacsi" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CuocHen_BenhNhan">
+          <End Role="BenhNhan" Type="Self.BenhNhan" Multiplicity="1" />
+          <End Role="CuocHen" Type="Self.CuocHen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BenhNhan">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CuocHen">
+              <PropertyRef Name="id_benhnhan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CuocHen_Nganh">
+          <End Role="Nganh" Type="Self.Nganh" Multiplicity="1" />
+          <End Role="CuocHen" Type="Self.CuocHen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nganh">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CuocHen">
+              <PropertyRef Name="id_nganh" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="HOSPITALDBModelStoreContainer">
+          <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BacSi" EntityType="Self.BacSi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BenhNhan" EntityType="Self.BenhNhan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CuocHen" EntityType="Self.CuocHen" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Nganh" EntityType="Self.Nganh" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="THONGBAO" EntityType="Self.THONGBAO" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__BacSi__id_nganh__4222D4EF" Association="Self.FK__BacSi__id_nganh__4222D4EF">
+            <End Role="Nganh" EntitySet="Nganh" />
+            <End Role="BacSi" EntitySet="BacSi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CuocHen_BacSi" Association="Self.FK_CuocHen_BacSi">
+            <End Role="BacSi" EntitySet="BacSi" />
+            <End Role="CuocHen" EntitySet="CuocHen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CuocHen_BenhNhan" Association="Self.FK_CuocHen_BenhNhan">
+            <End Role="BenhNhan" EntitySet="BenhNhan" />
+            <End Role="CuocHen" EntitySet="CuocHen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CuocHen_Nganh" Association="Self.FK_CuocHen_Nganh">
+            <End Role="Nganh" EntitySet="Nganh" />
+            <End Role="CuocHen" EntitySet="CuocHen" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HOSPITALDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ho" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ten" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="taikhoan" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Name="matkhau" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="BacSi">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ho" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ten" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_nganh" Type="Int32" Nullable="false" />
+          <Property Name="taikhoan" Type="String" MaxLength="11" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="matkhau" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Nganh" Relationship="Self.FK__BacSi__id_nganh__4222D4EF" FromRole="BacSi" ToRole="Nganh" />
+          <NavigationProperty Name="CuocHens" Relationship="Self.FK_CuocHen_BacSi" FromRole="BacSi" ToRole="CuocHen" />
+        </EntityType>
+        <EntityType Name="BenhNhan">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ten" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ho" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="taikhoan" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Name="matkhau" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="sdt" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="gioitinh" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CuocHens" Relationship="Self.FK_CuocHen_BenhNhan" FromRole="BenhNhan" ToRole="CuocHen" />
+        </EntityType>
+        <EntityType Name="CuocHen">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_bacsi" Type="Int32" Nullable="false" />
+          <Property Name="id_benhnhan" Type="Int32" Nullable="false" />
+          <Property Name="id_nganh" Type="Int32" Nullable="false" />
+          <Property Name="ngay" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="thoigian" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="mota" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="isDuyet" Type="Boolean" />
+          <NavigationProperty Name="BacSi" Relationship="Self.FK_CuocHen_BacSi" FromRole="CuocHen" ToRole="BacSi" />
+          <NavigationProperty Name="BenhNhan" Relationship="Self.FK_CuocHen_BenhNhan" FromRole="CuocHen" ToRole="BenhNhan" />
+          <NavigationProperty Name="Nganh" Relationship="Self.FK_CuocHen_Nganh" FromRole="CuocHen" ToRole="Nganh" />
+        </EntityType>
+        <EntityType Name="Nganh">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ten_nganh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="BacSis" Relationship="Self.FK__BacSi__id_nganh__4222D4EF" FromRole="Nganh" ToRole="BacSi" />
+          <NavigationProperty Name="CuocHens" Relationship="Self.FK_CuocHen_Nganh" FromRole="Nganh" ToRole="CuocHen" />
+        </EntityType>
+        <EntityType Name="THONGBAO">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Noidung" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK__BacSi__id_nganh__4222D4EF">
+          <End Role="Nganh" Type="Self.Nganh" Multiplicity="1" />
+          <End Role="BacSi" Type="Self.BacSi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nganh">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="BacSi">
+              <PropertyRef Name="id_nganh" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CuocHen_BacSi">
+          <End Role="BacSi" Type="Self.BacSi" Multiplicity="1" />
+          <End Role="CuocHen" Type="Self.CuocHen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BacSi">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CuocHen">
+              <PropertyRef Name="id_bacsi" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CuocHen_BenhNhan">
+          <End Role="BenhNhan" Type="Self.BenhNhan" Multiplicity="1" />
+          <End Role="CuocHen" Type="Self.CuocHen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BenhNhan">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CuocHen">
+              <PropertyRef Name="id_benhnhan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CuocHen_Nganh">
+          <End Role="Nganh" Type="Self.Nganh" Multiplicity="1" />
+          <End Role="CuocHen" Type="Self.CuocHen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nganh">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CuocHen">
+              <PropertyRef Name="id_nganh" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="HOSPITALDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Admins" EntityType="Self.Admin" />
+          <EntitySet Name="BacSis" EntityType="Self.BacSi" />
+          <EntitySet Name="BenhNhans" EntityType="Self.BenhNhan" />
+          <EntitySet Name="CuocHens" EntityType="Self.CuocHen" />
+          <EntitySet Name="Nganhs" EntityType="Self.Nganh" />
+          <EntitySet Name="THONGBAOs" EntityType="Self.THONGBAO" />
+          <AssociationSet Name="FK__BacSi__id_nganh__4222D4EF" Association="Self.FK__BacSi__id_nganh__4222D4EF">
+            <End Role="Nganh" EntitySet="Nganhs" />
+            <End Role="BacSi" EntitySet="BacSis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CuocHen_BacSi" Association="Self.FK_CuocHen_BacSi">
+            <End Role="BacSi" EntitySet="BacSis" />
+            <End Role="CuocHen" EntitySet="CuocHens" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CuocHen_BenhNhan" Association="Self.FK_CuocHen_BenhNhan">
+            <End Role="BenhNhan" EntitySet="BenhNhans" />
+            <End Role="CuocHen" EntitySet="CuocHens" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CuocHen_Nganh" Association="Self.FK_CuocHen_Nganh">
+            <End Role="Nganh" EntitySet="Nganhs" />
+            <End Role="CuocHen" EntitySet="CuocHens" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HOSPITALDBModelStoreContainer" CdmEntityContainer="HOSPITALDBEntities">
+          <EntitySetMapping Name="Admins">
+            <EntityTypeMapping TypeName="HOSPITALDBModel.Admin">
+              <MappingFragment StoreEntitySet="Admin">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ho" ColumnName="ho" />
+                <ScalarProperty Name="ten" ColumnName="ten" />
+                <ScalarProperty Name="taikhoan" ColumnName="taikhoan" />
+                <ScalarProperty Name="matkhau" ColumnName="matkhau" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BacSis">
+            <EntityTypeMapping TypeName="HOSPITALDBModel.BacSi">
+              <MappingFragment StoreEntitySet="BacSi">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ho" ColumnName="ho" />
+                <ScalarProperty Name="ten" ColumnName="ten" />
+                <ScalarProperty Name="id_nganh" ColumnName="id_nganh" />
+                <ScalarProperty Name="taikhoan" ColumnName="taikhoan" />
+                <ScalarProperty Name="matkhau" ColumnName="matkhau" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BenhNhans">
+            <EntityTypeMapping TypeName="HOSPITALDBModel.BenhNhan">
+              <MappingFragment StoreEntitySet="BenhNhan">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ten" ColumnName="ten" />
+                <ScalarProperty Name="ho" ColumnName="ho" />
+                <ScalarProperty Name="taikhoan" ColumnName="taikhoan" />
+                <ScalarProperty Name="matkhau" ColumnName="matkhau" />
+                <ScalarProperty Name="sdt" ColumnName="sdt" />
+                <ScalarProperty Name="gioitinh" ColumnName="gioitinh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CuocHens">
+            <EntityTypeMapping TypeName="HOSPITALDBModel.CuocHen">
+              <MappingFragment StoreEntitySet="CuocHen">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="id_bacsi" ColumnName="id_bacsi" />
+                <ScalarProperty Name="id_benhnhan" ColumnName="id_benhnhan" />
+                <ScalarProperty Name="id_nganh" ColumnName="id_nganh" />
+                <ScalarProperty Name="ngay" ColumnName="ngay" />
+                <ScalarProperty Name="thoigian" ColumnName="thoigian" />
+                <ScalarProperty Name="mota" ColumnName="mota" />
+                <ScalarProperty Name="isDuyet" ColumnName="isDuyet" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Nganhs">
+            <EntityTypeMapping TypeName="HOSPITALDBModel.Nganh">
+              <MappingFragment StoreEntitySet="Nganh">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ten_nganh" ColumnName="ten_nganh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="THONGBAOs">
+            <EntityTypeMapping TypeName="HOSPITALDBModel.THONGBAO">
+              <MappingFragment StoreEntitySet="THONGBAO">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Noidung" ColumnName="Noidung" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HOSPITALDBModelStoreContainer" CdmEntityContainer="HOSPITALDBEntities">
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="HOSPITALDBModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ho" ColumnName="ho" />
+          <ScalarProperty Name="ten" ColumnName="ten" />
+          <ScalarProperty Name="taikhoan" ColumnName="taikhoan" />
+          <ScalarProperty Name="matkhau" ColumnName="matkhau" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BacSis">
+      <EntityTypeMapping TypeName="HOSPITALDBModel.BacSi">
+        <MappingFragment StoreEntitySet="BacSi">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ho" ColumnName="ho" />
+          <ScalarProperty Name="ten" ColumnName="ten" />
+          <ScalarProperty Name="id_nganh" ColumnName="id_nganh" />
+          <ScalarProperty Name="taikhoan" ColumnName="taikhoan" />
+          <ScalarProperty Name="matkhau" ColumnName="matkhau" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BenhNhans">
+      <EntityTypeMapping TypeName="HOSPITALDBModel.BenhNhan">
+        <MappingFragment StoreEntitySet="BenhNhan">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ten" ColumnName="ten" />
+          <ScalarProperty Name="ho" ColumnName="ho" />
+          <ScalarProperty Name="taikhoan" ColumnName="taikhoan" />
+          <ScalarProperty Name="matkhau" ColumnName="matkhau" />
+          <ScalarProperty Name="sdt" ColumnName="sdt" />
+          <ScalarProperty Name="gioitinh" ColumnName="gioitinh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CuocHens">
+      <EntityTypeMapping TypeName="HOSPITALDBModel.CuocHen">
+        <MappingFragment StoreEntitySet="CuocHen">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_bacsi" ColumnName="id_bacsi" />
+          <ScalarProperty Name="id_benhnhan" ColumnName="id_benhnhan" />
+          <ScalarProperty Name="id_nganh" ColumnName="id_nganh" />
+          <ScalarProperty Name="ngay" ColumnName="ngay" />
+          <ScalarProperty Name="thoigian" ColumnName="thoigian" />
+          <ScalarProperty Name="mota" ColumnName="mota" />
+          <ScalarProperty Name="isDuyet" ColumnName="isDuyet" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nganhs">
+      <EntityTypeMapping TypeName="HOSPITALDBModel.Nganh">
+        <MappingFragment StoreEntitySet="Nganh">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ten_nganh" ColumnName="ten_nganh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="THONGBAOs">
+      <EntityTypeMapping TypeName="HOSPITALDBModel.THONGBAO">
+        <MappingFragment StoreEntitySet="THONGBAO">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Noidung" ColumnName="Noidung" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
