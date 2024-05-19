@@ -41,7 +41,7 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btngirisegit = new System.Windows.Forms.Button();
             this.btncikis = new System.Windows.Forms.Button();
-            this.btnduyurular = new System.Windows.Forms.Button();
+            this.btnDuyet = new System.Windows.Forms.Button();
             this.btnbilgidüzenle = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -134,7 +134,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox3.Location = new System.Drawing.Point(398, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(893, 472);
+            this.groupBox3.Size = new System.Drawing.Size(1308, 472);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh sách cuộc hẹn";
@@ -159,7 +159,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(887, 433);
+            this.dataGridView1.Size = new System.Drawing.Size(1302, 433);
             this.dataGridView1.TabIndex = 0;
             // 
             // groupBox4
@@ -167,7 +167,7 @@
             this.groupBox4.BackColor = System.Drawing.Color.Transparent;
             this.groupBox4.Controls.Add(this.btngirisegit);
             this.groupBox4.Controls.Add(this.btncikis);
-            this.groupBox4.Controls.Add(this.btnduyurular);
+            this.groupBox4.Controls.Add(this.btnDuyet);
             this.groupBox4.Controls.Add(this.btnbilgidüzenle);
             this.groupBox4.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox4.Location = new System.Drawing.Point(16, 338);
@@ -201,17 +201,18 @@
             this.btncikis.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btncikis.UseVisualStyleBackColor = false;
             // 
-            // btnduyurular
+            // btnDuyet
             // 
-            this.btnduyurular.BackColor = System.Drawing.Color.White;
-            this.btnduyurular.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnduyurular.Location = new System.Drawing.Point(211, 39);
-            this.btnduyurular.Name = "btnduyurular";
-            this.btnduyurular.Size = new System.Drawing.Size(142, 38);
-            this.btnduyurular.TabIndex = 1;
-            this.btnduyurular.Text = "Thông báo";
-            this.btnduyurular.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnduyurular.UseVisualStyleBackColor = false;
+            this.btnDuyet.BackColor = System.Drawing.Color.White;
+            this.btnDuyet.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnDuyet.Location = new System.Drawing.Point(211, 39);
+            this.btnDuyet.Name = "btnDuyet";
+            this.btnDuyet.Size = new System.Drawing.Size(142, 38);
+            this.btnDuyet.TabIndex = 1;
+            this.btnDuyet.Text = "Duyệt";
+            this.btnDuyet.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnDuyet.UseVisualStyleBackColor = false;
+            this.btnDuyet.Click += new System.EventHandler(this.btnDuyet_Click);
             // 
             // btnbilgidüzenle
             // 
@@ -224,12 +225,13 @@
             this.btnbilgidüzenle.Text = "Sửa thông tin";
             this.btnbilgidüzenle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnbilgidüzenle.UseVisualStyleBackColor = false;
+            this.btnbilgidüzenle.Click += new System.EventHandler(this.btnbilgidüzenle_Click);
             // 
             // FrmChiTietBacSi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1303, 496);
+            this.ClientSize = new System.Drawing.Size(1718, 496);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
@@ -261,7 +263,7 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btngirisegit;
         private System.Windows.Forms.Button btncikis;
-        private System.Windows.Forms.Button btnduyurular;
+        private System.Windows.Forms.Button btnDuyet;
         private System.Windows.Forms.Button btnbilgidüzenle;
     }
 }

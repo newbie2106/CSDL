@@ -50,5 +50,10 @@ namespace QL_BenhVien
             }
             Environment.Exit(0);
         }
+
+        private void FrmBacSiDangNhap_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

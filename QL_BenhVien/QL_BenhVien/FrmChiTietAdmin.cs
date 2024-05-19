@@ -53,8 +53,8 @@ namespace QL_BenhVien
 
         private void FrmChiTietAdmin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult cikis = MessageBox.Show("Bạn có muốn thoát chương trình không ? ", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (cikis == DialogResult.No)
+            DialogResult exit = MessageBox.Show("Bạn có muốn thoát chương trình không ? ", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (exit == DialogResult.No)
             {
                 e.Cancel = true;
                 return;

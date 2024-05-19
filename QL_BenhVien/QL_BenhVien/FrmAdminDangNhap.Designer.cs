@@ -32,11 +32,11 @@ namespace QL_BenhVien
             this.btnback = new System.Windows.Forms.Button();
             this.btngizle = new System.Windows.Forms.Button();
             this.btnDangNhap = new System.Windows.Forms.Button();
-            this.txtTK = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMK = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtTK = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnback
@@ -44,9 +44,9 @@ namespace QL_BenhVien
             this.btnback.BackColor = System.Drawing.Color.Transparent;
             this.btnback.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnback.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnback.Location = new System.Drawing.Point(521, 246);
+            this.btnback.Location = new System.Drawing.Point(488, 243);
             this.btnback.Name = "btnback";
-            this.btnback.Size = new System.Drawing.Size(106, 45);
+            this.btnback.Size = new System.Drawing.Size(48, 45);
             this.btnback.TabIndex = 20;
             this.btnback.UseVisualStyleBackColor = false;
             // 
@@ -55,9 +55,9 @@ namespace QL_BenhVien
             this.btngizle.BackColor = System.Drawing.Color.Transparent;
             this.btngizle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btngizle.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btngizle.Location = new System.Drawing.Point(521, 185);
+            this.btngizle.Location = new System.Drawing.Point(488, 191);
             this.btngizle.Name = "btngizle";
-            this.btngizle.Size = new System.Drawing.Size(56, 34);
+            this.btngizle.Size = new System.Drawing.Size(32, 34);
             this.btngizle.TabIndex = 21;
             this.btngizle.UseVisualStyleBackColor = false;
             // 
@@ -73,22 +73,12 @@ namespace QL_BenhVien
             this.btnDangNhap.UseVisualStyleBackColor = false;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
-            // txtTK
-            // 
-            this.txtTK.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTK.Location = new System.Drawing.Point(253, 145);
-            this.txtTK.Mask = "00000000000";
-            this.txtTK.Name = "txtTK";
-            this.txtTK.Size = new System.Drawing.Size(213, 40);
-            this.txtTK.TabIndex = 17;
-            this.txtTK.ValidatingType = typeof(int);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(82, 185);
+            this.label3.Location = new System.Drawing.Point(82, 191);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(134, 33);
             this.label3.TabIndex = 24;
@@ -109,7 +99,7 @@ namespace QL_BenhVien
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(77, 148);
+            this.label2.Location = new System.Drawing.Point(77, 140);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(139, 33);
             this.label2.TabIndex = 23;
@@ -126,15 +116,23 @@ namespace QL_BenhVien
             this.label1.TabIndex = 22;
             this.label1.Text = "Đăng Nhập Admin";
             // 
+            // txtTK
+            // 
+            this.txtTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtTK.Location = new System.Drawing.Point(253, 140);
+            this.txtTK.Name = "txtTK";
+            this.txtTK.Size = new System.Drawing.Size(214, 39);
+            this.txtTK.TabIndex = 25;
+            // 
             // FrmAdminDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(794, 450);
+            this.Controls.Add(this.txtTK);
             this.Controls.Add(this.btnback);
             this.Controls.Add(this.btngizle);
             this.Controls.Add(this.btnDangNhap);
-            this.Controls.Add(this.txtTK);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtMK);
             this.Controls.Add(this.label2);
@@ -152,10 +150,10 @@ namespace QL_BenhVien
         private System.Windows.Forms.Button btnback;
         private System.Windows.Forms.Button btngizle;
         private System.Windows.Forms.Button btnDangNhap;
-        private System.Windows.Forms.MaskedTextBox txtTK;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtMK;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtTK;
     }
 }

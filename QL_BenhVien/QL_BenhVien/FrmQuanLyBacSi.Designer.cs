@@ -30,14 +30,12 @@ namespace QL_BenhVien
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dbgird = new System.Windows.Forms.DataGridView();
             this.btnsayfayiyenile = new System.Windows.Forms.Button();
             this.btn_editBS = new System.Windows.Forms.Button();
             this.msktc = new System.Windows.Forms.MaskedTextBox();
             this.btn_deleteBS = new System.Windows.Forms.Button();
             this.btn_themBS = new System.Windows.Forms.Button();
             this.cmbBS = new System.Windows.Forms.ComboBox();
-            this.cmbnganh = new System.Windows.Forms.ComboBox();
             this.txtid = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,9 +46,11 @@ namespace QL_BenhVien
             this.label3 = new System.Windows.Forms.Label();
             this.lbIdTK = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.cmbnganh = new System.Windows.Forms.ComboBox();
+            this.dbgird = new System.Windows.Forms.DataGridView();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dbgird)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dbgird)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -76,16 +76,6 @@ namespace QL_BenhVien
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Bảng Bác Sĩ";
-            // 
-            // dbgird
-            // 
-            this.dbgird.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dbgird.Location = new System.Drawing.Point(460, 21);
-            this.dbgird.Name = "dbgird";
-            this.dbgird.RowHeadersWidth = 62;
-            this.dbgird.Size = new System.Drawing.Size(740, 403);
-            this.dbgird.TabIndex = 7;
-            this.dbgird.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dbgird_CellContentClick_1);
             // 
             // btnsayfayiyenile
             // 
@@ -144,15 +134,6 @@ namespace QL_BenhVien
             this.cmbBS.Name = "cmbBS";
             this.cmbBS.Size = new System.Drawing.Size(209, 41);
             this.cmbBS.TabIndex = 4;
-            // 
-            // cmbnganh
-            // 
-            this.cmbnganh.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbnganh.FormattingEnabled = true;
-            this.cmbnganh.Location = new System.Drawing.Point(229, 93);
-            this.cmbnganh.Name = "cmbnganh";
-            this.cmbnganh.Size = new System.Drawing.Size(209, 41);
-            this.cmbnganh.TabIndex = 3;
             // 
             // txtid
             // 
@@ -259,6 +240,25 @@ namespace QL_BenhVien
             this.label1.TabIndex = 4;
             this.label1.Text = "Số Tài Khoản :";
             // 
+            // cmbnganh
+            // 
+            this.cmbnganh.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbnganh.FormattingEnabled = true;
+            this.cmbnganh.Location = new System.Drawing.Point(229, 93);
+            this.cmbnganh.Name = "cmbnganh";
+            this.cmbnganh.Size = new System.Drawing.Size(209, 41);
+            this.cmbnganh.TabIndex = 3;
+            // 
+            // dbgird
+            // 
+            this.dbgird.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dbgird.Location = new System.Drawing.Point(460, 21);
+            this.dbgird.Name = "dbgird";
+            this.dbgird.RowHeadersWidth = 62;
+            this.dbgird.Size = new System.Drawing.Size(740, 403);
+            this.dbgird.TabIndex = 7;
+            this.dbgird.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dbgird_CellContentClick_1);
+            // 
             // FrmQuanLyBacSi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -272,9 +272,9 @@ namespace QL_BenhVien
             this.Load += new System.EventHandler(this.FrmQuanLyBacSi_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dbgird)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dbgird)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -288,7 +288,6 @@ namespace QL_BenhVien
         private System.Windows.Forms.Button btn_deleteBS;
         private System.Windows.Forms.Button btn_themBS;
         private System.Windows.Forms.ComboBox cmbBS;
-        private System.Windows.Forms.ComboBox cmbnganh;
         private System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -300,5 +299,6 @@ namespace QL_BenhVien
         private System.Windows.Forms.Label lbIdTK;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dbgird;
+        private System.Windows.Forms.ComboBox cmbnganh;
     }
 }
