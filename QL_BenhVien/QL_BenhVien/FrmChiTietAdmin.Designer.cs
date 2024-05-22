@@ -30,39 +30,74 @@ namespace QL_BenhVien
         private void InitializeComponent()
         {
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.btn_deleteThuoc = new System.Windows.Forms.Button();
+            this.btn_updateThuoc = new System.Windows.Forms.Button();
+            this.btn_addThuoc = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.lbtenAdmin = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbIdTK = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btn_addThuoc = new System.Windows.Forms.Button();
-            this.btn_updateThuoc = new System.Windows.Forms.Button();
-            this.btn_deleteThuoc = new System.Windows.Forms.Button();
             this.btn_QuanLyBS = new System.Windows.Forms.Button();
             this.btn_QuanLyBN = new System.Windows.Forms.Button();
+            this.dgvThongBao = new System.Windows.Forms.DataGridView();
             this.groupBox6.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThongBao)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox6
             // 
             this.groupBox6.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox6.Controls.Add(this.dgvThongBao);
             this.groupBox6.Controls.Add(this.btn_deleteThuoc);
             this.groupBox6.Controls.Add(this.btn_updateThuoc);
             this.groupBox6.Controls.Add(this.btn_addThuoc);
             this.groupBox6.Controls.Add(this.label9);
-            this.groupBox6.Controls.Add(this.label5);
-            this.groupBox6.Controls.Add(this.label4);
             this.groupBox6.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(12, 155);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(1101, 414);
             this.groupBox6.TabIndex = 11;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Kho Thuốc";
+            this.groupBox6.Text = "Thông Báo";
+            // 
+            // btn_deleteThuoc
+            // 
+            this.btn_deleteThuoc.Location = new System.Drawing.Point(278, 337);
+            this.btn_deleteThuoc.Name = "btn_deleteThuoc";
+            this.btn_deleteThuoc.Size = new System.Drawing.Size(114, 42);
+            this.btn_deleteThuoc.TabIndex = 1;
+            this.btn_deleteThuoc.Text = "Xóa";
+            this.btn_deleteThuoc.UseVisualStyleBackColor = true;
+            // 
+            // btn_updateThuoc
+            // 
+            this.btn_updateThuoc.Location = new System.Drawing.Point(128, 337);
+            this.btn_updateThuoc.Name = "btn_updateThuoc";
+            this.btn_updateThuoc.Size = new System.Drawing.Size(136, 42);
+            this.btn_updateThuoc.TabIndex = 1;
+            this.btn_updateThuoc.Text = "Cập Nhật";
+            this.btn_updateThuoc.UseVisualStyleBackColor = true;
+            // 
+            // btn_addThuoc
+            // 
+            this.btn_addThuoc.Location = new System.Drawing.Point(6, 337);
+            this.btn_addThuoc.Name = "btn_addThuoc";
+            this.btn_addThuoc.Size = new System.Drawing.Size(106, 42);
+            this.btn_addThuoc.TabIndex = 1;
+            this.btn_addThuoc.Text = "Thêm";
+            this.btn_addThuoc.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(6, 51);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(0, 33);
+            this.label9.TabIndex = 0;
             // 
             // lbtenAdmin
             // 
@@ -119,63 +154,6 @@ namespace QL_BenhVien
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Admin";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 111);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 33);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Tên Thuốc";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 171);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 33);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Số Lượng";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(6, 51);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(128, 33);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Mã Thuốc";
-            // 
-            // btn_addThuoc
-            // 
-            this.btn_addThuoc.Location = new System.Drawing.Point(6, 365);
-            this.btn_addThuoc.Name = "btn_addThuoc";
-            this.btn_addThuoc.Size = new System.Drawing.Size(106, 42);
-            this.btn_addThuoc.TabIndex = 1;
-            this.btn_addThuoc.Text = "Thêm";
-            this.btn_addThuoc.UseVisualStyleBackColor = true;
-            // 
-            // btn_updateThuoc
-            // 
-            this.btn_updateThuoc.Location = new System.Drawing.Point(118, 365);
-            this.btn_updateThuoc.Name = "btn_updateThuoc";
-            this.btn_updateThuoc.Size = new System.Drawing.Size(136, 42);
-            this.btn_updateThuoc.TabIndex = 1;
-            this.btn_updateThuoc.Text = "Cập Nhật";
-            this.btn_updateThuoc.UseVisualStyleBackColor = true;
-            // 
-            // btn_deleteThuoc
-            // 
-            this.btn_deleteThuoc.Location = new System.Drawing.Point(260, 365);
-            this.btn_deleteThuoc.Name = "btn_deleteThuoc";
-            this.btn_deleteThuoc.Size = new System.Drawing.Size(114, 42);
-            this.btn_deleteThuoc.TabIndex = 1;
-            this.btn_deleteThuoc.Text = "Xóa";
-            this.btn_deleteThuoc.UseVisualStyleBackColor = true;
-            // 
             // btn_QuanLyBS
             // 
             this.btn_QuanLyBS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -198,6 +176,16 @@ namespace QL_BenhVien
             this.btn_QuanLyBN.UseVisualStyleBackColor = true;
             this.btn_QuanLyBN.Click += new System.EventHandler(this.btn_QuanLyBN_Click);
             // 
+            // dgvThongBao
+            // 
+            this.dgvThongBao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvThongBao.Location = new System.Drawing.Point(16, 45);
+            this.dgvThongBao.Name = "dgvThongBao";
+            this.dgvThongBao.RowHeadersWidth = 62;
+            this.dgvThongBao.RowTemplate.Height = 28;
+            this.dgvThongBao.Size = new System.Drawing.Size(1023, 283);
+            this.dgvThongBao.TabIndex = 2;
+            // 
             // FrmChiTietAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -215,6 +203,7 @@ namespace QL_BenhVien
             this.groupBox6.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThongBao)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -230,9 +219,8 @@ namespace QL_BenhVien
         private System.Windows.Forms.Button btn_updateThuoc;
         private System.Windows.Forms.Button btn_addThuoc;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_QuanLyBS;
         private System.Windows.Forms.Button btn_QuanLyBN;
+        private System.Windows.Forms.DataGridView dgvThongBao;
     }
 }

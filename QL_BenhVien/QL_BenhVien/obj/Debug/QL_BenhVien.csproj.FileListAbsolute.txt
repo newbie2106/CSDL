@@ -29,3 +29,4 @@ C:\Users\TAN DAT\Desktop\CSDL\QL_BenhVien\QL_BenhVien\bin\Debug\EntityFramework.
 C:\Users\TAN DAT\Desktop\CSDL\QL_BenhVien\QL_BenhVien\bin\Debug\EntityFramework.xml
 C:\Users\TAN DAT\Desktop\CSDL\QL_BenhVien\QL_BenhVien\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\TAN DAT\Desktop\CSDL\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.csproj.CopyComplete
+C:\Users\TAN DAT\Desktop\CSDL\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.FrmTaoTKBacSi.resources
