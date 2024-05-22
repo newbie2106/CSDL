@@ -9,3 +9,17 @@ E:\QL_BenhVien\QL_BenhVien\bin\Debug\QL_BenhVien.exe
 E:\QL_BenhVien\QL_BenhVien\bin\Debug\QL_BenhVien.pdb
 E:\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.exe
 E:\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.pdb
+D:\LTCSDL\CSDL\QL_BenhVien\QL_BenhVien\bin\Debug\QL_BenhVien.exe.config
+D:\LTCSDL\CSDL\QL_BenhVien\QL_BenhVien\bin\Debug\QL_BenhVien.exe
+D:\LTCSDL\CSDL\QL_BenhVien\QL_BenhVien\bin\Debug\QL_BenhVien.pdb
+D:\LTCSDL\CSDL\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.csproj.AssemblyReference.cache
+D:\LTCSDL\CSDL\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.Properties.Resources.resources
+D:\LTCSDL\CSDL\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.csproj.GenerateResource.cache
+D:\LTCSDL\CSDL\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.csproj.CoreCompileInputs.cache
+D:\LTCSDL\CSDL\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.exe
+D:\LTCSDL\CSDL\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.pdb
+D:\LTCSDL\CSDL\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.FrmBenhNhanDangNhap.resources
+D:\LTCSDL\CSDL\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.FrmChiTietBenhNhan.resources
+D:\LTCSDL\CSDL\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.FrmDangKiBenhNhan.resources
+D:\LTCSDL\CSDL\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.FrmBenhNhanDatLich.resources
+D:\LTCSDL\CSDL\QL_BenhVien\QL_BenhVien\obj\Debug\QL_BenhVien.FrmChinhSuaThongTinBenhNhan.resources

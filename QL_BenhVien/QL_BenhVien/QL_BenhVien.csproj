@@ -47,25 +47,52 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConnect.cs" />
-    <Compile Include="FrmBacSiDangNhap.cs">
+    <Compile Include="FrmBenhNhanDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmBacSiDangNhap.Designer.cs">
-      <DependentUpon>FrmBacSiDangNhap.cs</DependentUpon>
+    <Compile Include="FrmBenhNhanDangNhap.Designer.cs">
+      <DependentUpon>FrmBenhNhanDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmChiTietBacSi.cs">
+    <Compile Include="FrmBenhNhanDatLich.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmChiTietBacSi.Designer.cs">
-      <DependentUpon>FrmChiTietBacSi.cs</DependentUpon>
+    <Compile Include="FrmBenhNhanDatLich.Designer.cs">
+      <DependentUpon>FrmBenhNhanDatLich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChinhSuaThongTinBenhNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChinhSuaThongTinBenhNhan.Designer.cs">
+      <DependentUpon>FrmChinhSuaThongTinBenhNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChiTietBenhNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChiTietBenhNhan.Designer.cs">
+      <DependentUpon>FrmChiTietBenhNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDangKiBenhNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDangKiBenhNhan.Designer.cs">
+      <DependentUpon>FrmDangKiBenhNhan.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmBacSiDangNhap.resx">
-      <DependentUpon>FrmBacSiDangNhap.cs</DependentUpon>
+    <EmbeddedResource Include="FrmBenhNhanDangNhap.resx">
+      <DependentUpon>FrmBenhNhanDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmChiTietBacSi.resx">
-      <DependentUpon>FrmChiTietBacSi.cs</DependentUpon>
+    <EmbeddedResource Include="FrmBenhNhanDatLich.resx">
+      <DependentUpon>FrmBenhNhanDatLich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChinhSuaThongTinBenhNhan.resx">
+      <DependentUpon>FrmChinhSuaThongTinBenhNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChiTietBenhNhan.resx">
+      <DependentUpon>FrmChiTietBenhNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDangKiBenhNhan.resx">
+      <DependentUpon>FrmDangKiBenhNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -75,6 +102,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -88,6 +116,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye-crossed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tải xuống.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
