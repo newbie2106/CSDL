@@ -16,7 +16,7 @@ namespace QL_BenhVien
         public FrmChiTietAdmin()
         {
             InitializeComponent();
-            this.MaximumSize = new System.Drawing.Size(2000, 2000);
+            
         }
         public string TC;
         DBConnect _conn = new DBConnect();
@@ -53,8 +53,8 @@ namespace QL_BenhVien
 
         private void FrmChiTietAdmin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult cikis = MessageBox.Show("Bạn có muốn thoát chương trình không ? ", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (cikis == DialogResult.No)
+            DialogResult thongbao = MessageBox.Show("Bạn có muốn thoát chương trình không ? ", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (thongbao == DialogResult.No)
             {
                 e.Cancel = true;
                 return;

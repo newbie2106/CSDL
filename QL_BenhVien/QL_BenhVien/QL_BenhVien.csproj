@@ -104,6 +104,12 @@
     <Compile Include="FrmQuanLyBenhNhan.Designer.cs">
       <DependentUpon>FrmQuanLyBenhNhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTaoTKBacSi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTaoTKBacSi.Designer.cs">
+      <DependentUpon>FrmTaoTKBacSi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -127,6 +133,12 @@
     <Compile Include="THONGBAO.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="TrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrangChu.Designer.cs">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmAdminDangNhap.resx">
       <DependentUpon>FrmAdminDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +157,9 @@
     <EmbeddedResource Include="FrmQuanLyBenhNhan.resx">
       <DependentUpon>FrmQuanLyBenhNhan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmTaoTKBacSi.resx">
+      <DependentUpon>FrmTaoTKBacSi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -154,6 +169,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TrangChu.resx">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>

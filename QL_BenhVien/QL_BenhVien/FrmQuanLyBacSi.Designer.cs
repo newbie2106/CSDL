@@ -30,15 +30,18 @@ namespace QL_BenhVien
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnRF = new System.Windows.Forms.Button();
             this.dbgird = new System.Windows.Forms.DataGridView();
             this.btnsayfayiyenile = new System.Windows.Forms.Button();
             this.btn_editBS = new System.Windows.Forms.Button();
+            this.mktc = new System.Windows.Forms.MaskedTextBox();
             this.msktc = new System.Windows.Forms.MaskedTextBox();
             this.btn_deleteBS = new System.Windows.Forms.Button();
             this.btn_themBS = new System.Windows.Forms.Button();
             this.cmbBS = new System.Windows.Forms.ComboBox();
             this.cmbnganh = new System.Windows.Forms.ComboBox();
             this.txtid = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -56,15 +59,18 @@ namespace QL_BenhVien
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.btnRF);
             this.groupBox3.Controls.Add(this.dbgird);
             this.groupBox3.Controls.Add(this.btnsayfayiyenile);
             this.groupBox3.Controls.Add(this.btn_editBS);
+            this.groupBox3.Controls.Add(this.mktc);
             this.groupBox3.Controls.Add(this.msktc);
             this.groupBox3.Controls.Add(this.btn_deleteBS);
             this.groupBox3.Controls.Add(this.btn_themBS);
             this.groupBox3.Controls.Add(this.cmbBS);
             this.groupBox3.Controls.Add(this.cmbnganh);
             this.groupBox3.Controls.Add(this.txtid);
+            this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label6);
@@ -72,10 +78,20 @@ namespace QL_BenhVien
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(12, 165);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1206, 447);
+            this.groupBox3.Size = new System.Drawing.Size(1192, 447);
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Bảng Bác Sĩ";
+            // 
+            // btnRF
+            // 
+            this.btnRF.Location = new System.Drawing.Point(6, 399);
+            this.btnRF.Name = "btnRF";
+            this.btnRF.Size = new System.Drawing.Size(106, 42);
+            this.btnRF.TabIndex = 8;
+            this.btnRF.Text = "Tải lại bảng";
+            this.btnRF.UseVisualStyleBackColor = true;
+            this.btnRF.Click += new System.EventHandler(this.btnRF_Click);
             // 
             // dbgird
             // 
@@ -83,9 +99,9 @@ namespace QL_BenhVien
             this.dbgird.Location = new System.Drawing.Point(460, 21);
             this.dbgird.Name = "dbgird";
             this.dbgird.RowHeadersWidth = 62;
-            this.dbgird.Size = new System.Drawing.Size(740, 403);
+            this.dbgird.Size = new System.Drawing.Size(726, 355);
             this.dbgird.TabIndex = 7;
-            this.dbgird.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dbgird_CellContentClick_1);
+            this.dbgird.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dbgird_CellClick);
             // 
             // btnsayfayiyenile
             // 
@@ -100,12 +116,24 @@ namespace QL_BenhVien
             // 
             // btn_editBS
             // 
-            this.btn_editBS.Location = new System.Drawing.Point(173, 334);
+            this.btn_editBS.Location = new System.Drawing.Point(136, 334);
             this.btn_editBS.Name = "btn_editBS";
-            this.btn_editBS.Size = new System.Drawing.Size(92, 42);
+            this.btn_editBS.Size = new System.Drawing.Size(185, 42);
             this.btn_editBS.TabIndex = 1;
-            this.btn_editBS.Text = "Sửa";
+            this.btn_editBS.Text = "Chuyển Khoa";
             this.btn_editBS.UseVisualStyleBackColor = true;
+            this.btn_editBS.Click += new System.EventHandler(this.btn_editBS_Click);
+            // 
+            // mktc
+            // 
+            this.mktc.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mktc.Location = new System.Drawing.Point(229, 263);
+            this.mktc.Mask = "00000000000";
+            this.mktc.Name = "mktc";
+            this.mktc.ReadOnly = true;
+            this.mktc.Size = new System.Drawing.Size(209, 40);
+            this.mktc.TabIndex = 5;
+            this.mktc.ValidatingType = typeof(int);
             // 
             // msktc
             // 
@@ -120,21 +148,23 @@ namespace QL_BenhVien
             // 
             // btn_deleteBS
             // 
-            this.btn_deleteBS.Location = new System.Drawing.Point(303, 334);
+            this.btn_deleteBS.Location = new System.Drawing.Point(341, 334);
             this.btn_deleteBS.Name = "btn_deleteBS";
             this.btn_deleteBS.Size = new System.Drawing.Size(97, 42);
             this.btn_deleteBS.TabIndex = 1;
             this.btn_deleteBS.Text = "Xóa";
             this.btn_deleteBS.UseVisualStyleBackColor = true;
+            this.btn_deleteBS.Click += new System.EventHandler(this.btn_deleteBS_Click);
             // 
             // btn_themBS
             // 
-            this.btn_themBS.Location = new System.Drawing.Point(24, 334);
+            this.btn_themBS.Location = new System.Drawing.Point(9, 334);
             this.btn_themBS.Name = "btn_themBS";
             this.btn_themBS.Size = new System.Drawing.Size(106, 42);
             this.btn_themBS.TabIndex = 1;
             this.btn_themBS.Text = "Thêm";
             this.btn_themBS.UseVisualStyleBackColor = true;
+            this.btn_themBS.Click += new System.EventHandler(this.btn_themBS_Click);
             // 
             // cmbBS
             // 
@@ -153,6 +183,7 @@ namespace QL_BenhVien
             this.cmbnganh.Name = "cmbnganh";
             this.cmbnganh.Size = new System.Drawing.Size(209, 41);
             this.cmbnganh.TabIndex = 3;
+            this.cmbnganh.SelectedIndexChanged += new System.EventHandler(this.CmbNganh_SelectedIndexChanged);
             // 
             // txtid
             // 
@@ -163,6 +194,16 @@ namespace QL_BenhVien
             this.txtid.ReadOnly = true;
             this.txtid.Size = new System.Drawing.Size(209, 40);
             this.txtid.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(18, 266);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(134, 33);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Mật Khẩu:";
             // 
             // label8
             // 
@@ -263,7 +304,7 @@ namespace QL_BenhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1230, 624);
+            this.ClientSize = new System.Drawing.Size(1234, 624);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
             this.Name = "FrmQuanLyBacSi";
@@ -300,5 +341,8 @@ namespace QL_BenhVien
         private System.Windows.Forms.Label lbIdTK;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dbgird;
+        private System.Windows.Forms.MaskedTextBox mktc;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnRF;
     }
 }
